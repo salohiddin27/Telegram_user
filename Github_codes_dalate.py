@@ -39,7 +39,7 @@ async def handle_outgoing_message(event: Message):
     global away_message
     print(event.saved_peer_id)
     text = event.message.message
-    if event.saved_peer_id.user_id == 2086680716:
+    if event.saved_peer_id and event.saved_peer_id.user_id == 2086680716:
         print("Chat is Saved Messages", event.message)
         if text == "dis":
             print("Disabling")
